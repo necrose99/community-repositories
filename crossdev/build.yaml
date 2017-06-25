@@ -1,0 +1,29 @@
+repository:
+   description: crossdev  
+   #/use/local
+build:
+  emerge:
+    features: assume-digests binpkg-logs -userpriv config-protect-if-modified distlocks ebuild-locks fixlafiles merge-sync parallel-fetch preserve-libs protect-owned sandbox sfperms splitdebug strict -sandbox -usersandbox
+    split_install: 1
+  overlays:
+    cross-arm64-linux 
+    cross-armv7a-hardfloat-linux-gnueabi
+  equo:
+    package:
+      remove:
+
+  target:
+  # for Arm64 RPi3 or other embeded , or Arm64 blades. 
+cross-arm64-linux-gnui/binutils 
+cross-arm64-linux-gnui/linux-headers
+cross-arm64-linux-gnui/gcc 
+cross-arm64-linux-gnui/glibc
+# RPI
+cross-armv7a-hardfloat-linux-gnueabi/binutils 
+cross-armv7a-hardfloat-linux-gnueabi/linux-headers
+cross-armv7a-hardfloat-linux-gnueabi/gcc 
+cross-armv7a-hardfloat-linux-gnueabi/glibc 
+ 
+  
+#crossdev --ov-output /usr/local/portage -S -v -t armv7a-hardfloat-linux-gnueabi
+# crossdev --ov-output /usr/local/portage -S -v -t arm64-linux-gnu  
