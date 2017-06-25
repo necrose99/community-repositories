@@ -1,10 +1,11 @@
 # for Arm64 RPi3 or other embeded , or Arm64 blades. 
+# multilib for arm64 woould be a plus.
 cross-arm64-linux-gnui/binutils multitarget
 cross-arm64-linux-gnui/linux-headers
-cross-arm64-linux-gnui/gcc 
-cross-arm64-linux-gnui/glibc
+cross-arm64-linux-gnui/gcc gcj multilib objc objc-gc objc++ go graphite cilk vtv mpx cxx fortran openmp sanitize
+cross-arm64-linux-gnui/glibc mutilib profile
 # RPI
 cross-armv7a-hardfloat-linux-gnueabi/binutils 
 cross-armv7a-hardfloat-linux-gnueabi/linux-headers
-cross-armv7a-hardfloat-linux-gnueabi/gcc 
-cross-armv7a-hardfloat-linux-gnueabi/glibc 
+cross-armv7a-hardfloat-linux-gnueabi/gcc gcj multilib objc objc-gc objc++ go graphite cilk vtv mpx cxx fortran openmp sanitize
+cross-armv7a-hardfloat-linux-gnueabi/glibc mutilib profile
